@@ -1,0 +1,80 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'DM sans';
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Cambia el tamaño según tus necesidades */
+  gap: 20px; /* Espacio entre las tarjetas */
+}
+
+.grid-container div{
+  background-color: #e9e4e0;
+  border-radius: 5px;
+  padding: 10px;
+  transition: box-shadow 0.3s;
+}
+
+.grid-container div p{
+  text-align: center;
+  font-family: 'Franklin Gothic Medium';
+  font-size: 2rem;
+  color: blueviolet;
+  text-transform: uppercase;
+}
+
+.modal-card h1{
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+.grid-container div img{
+  max-width: 80%; /* La imagen no será más ancha que su contenedor */
+  height: auto; 
+}
+
+.grid-container div:hover {
+  box-shadow: 0px 0px 105px 10px rgba(99,46,143,0.9); /* Efecto neón con sombra */
+  color: rgb(102, 205, 223)
+}
+
+
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  max-width: 80%;
+  max-height: 80%;
+  overflow: auto;
+}
+
+
+.stats{
+  display: flex;
+  justify-content: space-around;
+  font-size: 2.2rem;
+}
+
